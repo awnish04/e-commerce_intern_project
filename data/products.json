@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "price": 59.99,
+    "category": "Electronics",
+    "description": "High-quality wireless headphones with noise cancellation.",
+    "image": "/images/wireless-headphone.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Smartwatch",
+    "price": 199.99,
+    "category": "Wearables",
+    "description": "Feature-packed smartwatch with fitness tracking.",
+    "image": "/images/smartwatch.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Gaming Laptop",
+    "price": 1299.99,
+    "category": "Computers",
+    "description": "Powerful gaming laptop with high refresh rate display.",
+    "image": "/images/GamingLaptop.webp"
+  },
+  {
+    "id": 4,
+    "name": "Bluetooth Speaker",
+    "price": 89.99,
+    "category": "Electronics",
+    "description": "Portable Bluetooth speaker with deep bass and long battery life.",
+    "image": "/images/portablebluetoothspeakers.webp"
+  },
+  {
+    "id": 5,
+    "name": "Running Shoes",
+    "price": 79.99,
+    "category": "Footwear",
+    "description": "Lightweight running shoes with superior cushioning.",
+    "image": "/images/RunningShoes.jpg"
+  },
+  {
+    "id": 6,
+    "name": "DSLR Camera",
+    "price": 499.99,
+    "category": "Photography",
+    "description": "Professional-grade DSLR camera with 24MP sensor.",
+    "image": "/images/dslr-cameras.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Mechanical Keyboard",
+    "price": 109.99,
+    "category": "Computers",
+    "description": "RGB mechanical keyboard with tactile switches.",
+    "image": "/images/keyboard.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Smart TV",
+    "price": 699.99,
+    "category": "Home Appliances",
+    "description": "4K UHD Smart TV with built-in streaming apps.",
+    "image": "/images/SmartTV.png"
+  },
+  {
+    "id": 9,
+    "name": "Backpack",
+    "price": 49.99,
+    "category": "Accessories",
+    "description": "Water-resistant backpack with laptop compartment.",
+    "image": "/images/BagPack.webp"
+  },
+  {
+    "id": 10,
+    "name": "Fitness Tracker",
+    "price": 129.99,
+    "category": "Wearables",
+    "description": "Wearable fitness tracker with heart rate monitoring.",
+    "image": "/images/fitness-tracker.webp"
+  },
+  {
+    "id": 11,
+    "name": "Coffee Maker",
+    "price": 39.99,
+    "category": "Home Appliances",
+    "description": "Automatic coffee maker with multiple brewing options.",
+    "image": "/images/CoffeeMaker.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Smartphone",
+    "price": 899.99,
+    "category": "Electronics",
+    "description": "Latest smartphone with high-end camera and AMOLED display.",
+    "image": "/images/smartphone.avif"
+  },
+  {
+    "id": 13,
+    "name": "Wireless Mouse",
+    "price": 29.99,
+    "category": "Computers",
+    "description": "Ergonomic wireless mouse with long battery life.",
+    "image": "/images/wirelessmouse.webp"
+  },
+  {
+    "id": 14,
+    "name": "Tablet",
+    "price": 499.99,
+    "category": "Electronics",
+    "description": "Powerful tablet with high-resolution display.",
+    "image": "/images/tablet.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Hiking Boots",
+    "price": 129.99,
+    "category": "Footwear",
+    "description": "Durable and comfortable hiking boots for outdoor adventures.",
+    "image": "/images/hikingboots.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Smart Light Bulb",
+    "price": 24.99,
+    "category": "Home Appliances",
+    "description": "Smart LED bulb with adjustable color and brightness.",
+    "image": "/images/smart-led-bulb.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Portable Charger",
+    "price": 39.99,
+    "category": "Accessories",
+    "description": "High-capacity power bank for charging devices on the go.",
+    "image": "/images/portable-charger.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Digital Drawing Tablet",
+    "price": 349.99,
+    "category": "Computers",
+    "description": "Graphic tablet for digital artists and designers.",
+    "image": "/images/digital-drawing-tablet.webp"
+  },
+  {
+    "id": 19,
+    "name": "Noise-Canceling Earbuds",
+    "price": 149.99,
+    "category": "Electronics",
+    "description": "True wireless earbuds with active noise cancellation.",
+    "image": "/images/noise-canceling-buds.webp"
+  },
+  {
+    "id": 20,
+    "name": "Gaming Chair",
+    "price": 249.99,
+    "category": "Furniture",
+    "description": "Ergonomic gaming chair with lumbar support.",
+    "image": "/images/gamingChair.jpg"
+  }
+]
