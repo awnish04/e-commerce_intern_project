@@ -36,9 +36,9 @@ export default function Navbar({
       <div className="container mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
         {/* Left Section - Logo */}
         <div className="flex items-center">
-          <a href="#">
+          <Link href="/">
             <p className="cursor-pointer text-xl font-semibold">E-Commerce</p>
-          </a>
+          </Link>
         </div>
 
         {/* Center Section - Search Bar (Responsive) */}
