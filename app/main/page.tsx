@@ -1,6 +1,6 @@
 "use client"; // Ensure this is a client-side component
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import productsData from "@/data/products.json"; // Import your static data
 import ProductCard from "@/components/ProductCard";
 import Footer from "@/components/Footer";
@@ -14,40 +14,17 @@ import { motion } from "framer-motion";
 import { transition1 } from "@/components/transitions";
 
 function Main() {
-  const getFavoritesFromLocalStorage = (): number[] => {
-    if (typeof window !== "undefined") {
-      const favorites = localStorage.getItem("favorites");
-      return favorites ? JSON.parse(favorites) : [];
-    }
-    return []; // Return an empty array if running on the server
-  };
-
-  const saveFavoritesToLocalStorage = (favorites: number[]): void => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("favorites", JSON.stringify(favorites));
-    }
-  };
-
   const [category, setCategory] = useState("All");
   const [sort, setSort] = useState("price-asc");
   const [searchQuery, setSearchQuery] = useState("");
-  const [favorites, setFavorites] = useState<number[]>([]);
   const [isClient, setIsClient] = useState(false);
 
-  // Ensure the code below runs only on the client-side
   useEffect(() => {
-    setIsClient(true); // Set the client-side state to true
-    setFavorites(getFavoritesFromLocalStorage()); // Load favorites on the client side
+    setIsClient(true);
   }, []);
 
-  const toggleFavorite = (productId: number): void => {
-    const updatedFavorites = favorites.includes(productId)
-      ? favorites.filter((id) => id !== productId)
-      : [...favorites, productId];
-
-    setFavorites(updatedFavorites);
-    saveFavoritesToLocalStorage(updatedFavorites); // Persist favorites
-  };
+  // Prevent SSR errors by returning null if not on client-side
+  if (!isClient) return null;
 
   const filteredProducts = productsData.filter(
     (p: Product) =>
@@ -59,8 +36,6 @@ function Main() {
     sort === "price-asc" ? a.price - b.price : b.price - a.price
   );
 
-  // Render client-side only
-  if (!isClient) return null;
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar onSearch={setSearchQuery} />
@@ -108,19 +83,22 @@ function Main() {
                   <ProductCard
                     key={product.id}
                     product={product}
-                    onToggleFavorite={toggleFavorite}
-                    isFavorite={favorites.includes(product.id)}
+                    onToggleFavorite={() => {}} // No-op function
+                    isFavorite={false} // Default value
                   />
                 </motion.div>
               ))
             ) : (
               <div className="col-span-3 text-center text-gray-500">
-                <Lottie
-                  animationData={animationData}
-                  loop
-                  autoplay
-                  className="w-72 h-82 mx-auto my-14 col-span-3"
-                />
+                {isClient && (
+                  <Lottie
+                    animationData={animationData}
+                    loop
+                    autoplay
+                    className="w-72 h-82 mx-auto my-14 col-span-3"
+                  />
+                )}
+
                 <span className="font-bold">No Product Found</span>
               </div>
             )}
