@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Menu, ShoppingCart, X } from "lucide-react";
 import { ModeToggle } from "./theme-toggle";

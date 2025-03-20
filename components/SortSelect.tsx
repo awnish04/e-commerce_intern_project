@@ -24,6 +24,7 @@
 //   );
 // }
 
+"use client";
 // components/SortSelect.tsx
 import {
   Select,

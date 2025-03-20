@@ -1,3 +1,4 @@
+"use client";
 type SearchProps = {
   searchTerm: string;
   setSearchTerm: (term: string) => void;
