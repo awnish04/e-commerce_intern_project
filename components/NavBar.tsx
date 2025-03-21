@@ -32,7 +32,7 @@ export default function Navbar({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: "40%" }}
       transition={{ ...transition1, duration: 0.7 }}
-      className="border-b sticky top-0 bg-white dark:bg-gray-900"
+      className="border-b sticky top-0 bg-white dark:bg-gray-900 z-50"
     >
       <div className="container mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
         {/* Left Section - Logo */}

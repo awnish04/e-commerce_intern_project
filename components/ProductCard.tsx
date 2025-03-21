@@ -12,9 +12,9 @@ interface ProductProps {
 export default function ProductCard({ product }: ProductProps) {
   return (
     <div>
-      <div className="md:p-4 lg:p-7 p-3 border border-grayshade-200 dark:border-grayshade-300 rounded-xl dark:bg-grayshade-500 w-full justify-center justify-items-center justify-self-center shadow-2xl ">
+      <div className="md:p-4 lg:p-7 p-3 border border-grayshade-200 dark:border-grayshade-300 rounded-xl dark:bg-grayshade-500 w-full justify-center justify-items-center justify-self-center shadow-xl cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out z-0">
         <Image
-          className="w-full rounded-lg self-stretch h-72 min-h-52 mb-7 object-cover"
+          className="w-full rounded-lg self-stretch h-64 min-h-52 mb-7 object-cover shadow"
           src={product.image}
           alt={product.name}
           width={200} // Adjust as needed
@@ -66,35 +66,3 @@ export default function ProductCard({ product }: ProductProps) {
     </div>
   );
 }
-
-// components/ProductCard.tsx
-// import React from "react";
-
-// import Image from "next/image";
-// import { Product } from "@/types/product";
-
-// interface ProductCardProps {
-//   product: Product;
-//   onToggleFavorite: () => void;
-//   isFavorite: boolean;
-// }
-
-// const ProductCard: React.FC<ProductCardProps> = ({
-//   product,
-//   onToggleFavorite,
-//   isFavorite,
-// }) => {
-//   return (
-//     <div className="product-card">
-//       <Image src={product.image} alt={product.name} width={200} height={200} />
-//       <h3>{product.name}</h3>
-//       <p>{product.description}</p>
-//       <p>{`$${product.price}`}</p>
-//       <button onClick={onToggleFavorite}>
-//         {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default ProductCard;
