@@ -116,10 +116,15 @@ import { motion } from "framer-motion";
 import { transition1 } from "@/components/transitions";
 import FilterCategory from "@/components/FilterCategory";
 import SortSelect from "@/components/SortSelect";
-import ProductList from "@/components/ProductList";
+// import ProductList from "@/components/ProductList";
 // import NoProductFound from "@/components/NoProductFound";
 import productsData from "../data/products.json"; // Adjust path if necessary
+import dynamic from "next/dynamic";
 
+// Dynamically import ProductList with SSR disabled
+const ProductList = dynamic(() => import("@/components/ProductList"), {
+  ssr: false, // Disable SSR for this component
+});
 export default function Home() {
   const [category, setCategory] = useState("All");
   const [sort, setSort] = useState("price-asc");
@@ -151,9 +156,16 @@ export default function Home() {
             <SortSelect onSort={setSort} />
           </motion.div>
 
+          {/* <ProductList
+            products={productsData}
+            category={category}
+            sort={sort}
+            searchQuery={searchQuery}
+          /> */}
           <ProductList
             products={productsData}
             category={category}
+            setCategory={setCategory} // Pass the setCategory function
             sort={sort}
             searchQuery={searchQuery}
           />
